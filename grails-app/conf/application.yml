@@ -1,4 +1,7 @@
 ---
+server:
+    contextPath: /helloworld
+
 grails:
     profile: web
     codegen:
