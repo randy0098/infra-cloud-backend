@@ -13,7 +13,12 @@ class UserController extends RestfulController {
     def show() {
         println params
         println params.id
-        new User(account: params.id,password: "123",projectName: "p1").save(flush:true)
+        def user = new User(account: params.id)
+        if (!user.save(flush:true)) {
+            user.errors.allErrors.each {
+                println it
+            }
+        }
         render("success1")
     }
 }

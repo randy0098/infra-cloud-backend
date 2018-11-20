@@ -6,7 +6,7 @@ class User {
     static constraints = {
     }
 
-//    ObjectId id
+    ObjectId id
     String account
     String password
     String projectName
