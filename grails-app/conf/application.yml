@@ -1,5 +1,17 @@
 ---
 grails:
+    mongodb:
+        host: "localhost"
+        port: 27017
+#        username: "blah"
+#        password: "blah"
+#        databaseName: "foo"
+        options:
+            autoConnectRetry: true
+            connectTimeout: 300
+        codecs:
+            - BirthdayCodec
+
     profile: rest-api
     codegen:
         defaultPackage: infra.cloud.backend
